@@ -92,7 +92,7 @@ def main(fasta, outdir, cuda):
     task = open(fasta, "r").read().split("\n")
     name, seq = task[0][1:], task[1].strip()
     pairs = predict(fasta, cuda)
-    write_bpseq(seq, pairs, os.path.join(outdir, f"{name}.bpseq"))
+    write_bpseq(seq, pairs, os.path.join(outdir, "KF_temp_res.bpseq"))
 
 if __name__ == "__main__":
     main()
