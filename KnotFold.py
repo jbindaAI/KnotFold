@@ -85,7 +85,7 @@ def write_bpseq(seq, pairs, outfile):
 @click.command()
 @click.option("-i", "--fasta", help="Input sequence (fasta format)", required=True)
 @click.option("-o", "--outdir", help="Output dictionary", default="./")
-@click.option("--cuda", is_flag=True, default=True)
+@click.option("--cuda", is_flag=True, default=False)
 
 
 def main(fasta, outdir, cuda):
